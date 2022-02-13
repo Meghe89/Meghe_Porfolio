@@ -2,6 +2,47 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Ubuntu', sans-serif; */
     text-decoration: none;
+}
+/* VAR */
+:root{
+    --main:rgb(200,20,60);
+    --white: #f1f1f1;
+    --black:#1b1a1a;
+}
+
+/* NAVBAR */
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 15px 0;
+    background-color: var(--main);
+    font-family: 'Ubuntu', sans-serif;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    font-size: 35px;
+    font-weight: 600;
+    color: var(--white);
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
 }

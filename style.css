@@ -109,10 +109,36 @@
     color: var(--main);
     font-weight: 500;
 }
+.home .home-content a{
+    display: inline-block;
+    background: var(--main);
+    color: var(--white);
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 4px;
+    border: 2px solid var(--main);
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    background: transparent;
+    color: var(--main);
+}
 
 /* MEDIAQUERY */ 
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 1104px) {
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width:768px) {
     .max-width{
         padding: 0 50px;
     }
@@ -121,11 +147,15 @@
         background: var(--black);
         height: 100vh;
         width: 100%;
-        left: 0;
-        top:0;
+        right:0;
+        top:-3000px;
         text-align: center;    
         padding-top: 80px;
         overflow: hidden;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        top: 0;
     }
     .navbar .menu li{
         display: block;
@@ -144,4 +174,52 @@
         z-index: 2;
     }
 
+    .menu-btn.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .menu-btn.is-active .bar:nth-child(1){
+        transform: rotate(44deg) translateY(11px);
+    }
+    .menu-btn.is-active .bar:nth-child(3){
+        transform: rotate(-44deg) translateY(-11px);
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+        
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
 } 
+@media screen and (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+        
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+        /* padding: 9px 25px; */
+    }
+}
+@media screen and (max-width: 500px) {
+    /* .max-width{
+        padding: 0 23px;
+    } */
+    .home .home-content .text-2{
+        font-size: 50px;
+        
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+}

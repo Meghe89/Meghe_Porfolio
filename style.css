@@ -13,6 +13,7 @@
     --main:rgb(200,20,60);
     --white: #f1f1f1;
     --black:#1b1a1a;
+    --dark:#222;
 }
 
 /* NAVBAR */
@@ -127,14 +128,8 @@
     background: transparent;
     color: var(--main);
 }
-/* ABOUT SECTION */
-section{
-    padding: 100px 0;
-}
-.about{
-    font-family: 'Poppins', sans-serif;
-}
-.about .title{
+/* section egual */
+section .title{
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -143,7 +138,7 @@ section{
     padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
 }
-.about .title::before{
+section .title::before{
     content: '';
     position: absolute;
     bottom: 0;
@@ -153,8 +148,7 @@ section{
     background: var(--black);
     transform: translateX(-50%);
 }
-.about .title::after{
-    content: 'who i am';
+section .title::after{
     position: absolute;
     bottom: -12px;
     left: 50%;
@@ -164,7 +158,20 @@ section{
     background: #fff;
     transform: translateX(-50%);
 }
-.about .about-content{
+/* ABOUT SECTION */
+section{
+    padding: 100px 0;
+}
+.about, .services{
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .title::after{
+    content: 'who i am';
+}
+
+.about .about-content,
+.services .serv-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -198,8 +205,49 @@ section{
     font-weight: 500;
     padding: 10px 30px;
 }
-
-
+/* services  */
+.services{
+    color: var(--white);
+    background: var(--black);
+}
+.services .title::before{
+    background: var(--white);    
+}
+.services .title::after{
+    background: var(--black);
+    content: 'What I provide';
+}
+.services .serv-content .card{
+    width: calc(33% - 20px);
+    background: var(--dark);
+    text-align: center;
+    border-radius: 4px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover{
+    background: var(--main);
+}
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .serv-content .card i{
+    font-size: 50px;
+    color: var(--main);
+}
+.services .serv-content .card:hover i{
+    transition: color 0.3s ease;
+    color: var(--white);
+}
+.services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
 
 
 
@@ -303,6 +351,10 @@ section{
     .about .about-content .right{
         flex: 100%;
     }
+    .services .serv-content .card{
+        width: calc(50%-10px);
+        margin-bottom: 20px;
+    }
 } 
 @media screen and (max-width: 690px) {
     .max-width{
@@ -318,6 +370,9 @@ section{
     .home .home-content a{
         font-size: 20px;
         /* padding: 9px 25px; */
+    }
+    .services .serv-content .card{
+        width: 100%;
     }
 }
 @media screen and (max-width: 500px) {

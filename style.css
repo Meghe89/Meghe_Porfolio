@@ -169,7 +169,10 @@ p{
 section{
     padding: 100px 0;
 }
-.about, .services, .skills{
+.about, 
+.services, 
+.skills,
+.teams{
     font-family: 'Poppins', sans-serif;
 }
 
@@ -215,14 +218,17 @@ section{
     padding: 10px 30px;
 }
 /* services  */
-.services{
+.services,
+.teams{
     color: var(--white);
     background: var(--black);
 }
-.services .title::before{
+.services .title::before,
+.teams .title::before{
     background: var(--white);    
 }
-.services .title::after{
+.services .title::after,
+.teams .title::after{
     background: var(--black);
     content: 'What I provide';
 }
@@ -312,8 +318,22 @@ section{
     font-size: 18px;
     padding: 8px 16px;
 }
-
-
+/* WORKS */
+.teams .title::after{
+    content: 'what I did';
+}
+.teams .carousel .card{
+    border-radius: 4px;
+    padding: 25px 35px;
+    text-align: center;
+}
+.teams .carousel .card img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--main);    
+}
 
 
 
@@ -452,4 +472,10 @@ section{
     .home .home-content .text-3{
         font-size: 27px;
     }
+    
+    .teams .carousel .card img{
+        width: 250px;
+        height: 250px;            
+    }
+    
 }

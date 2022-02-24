@@ -18,17 +18,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="scroll-up-btn"><i class="fas fa-angle-up"></i></div>
     <!-- NAVBAR START -->
     <nav class="navbar">
         <div class="max-width">
             <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
             <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Teams</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about" class="menu-items">About</a></li>
+                <li><a href="#services" class="menu-items">Services</a></li>
+                <li><a href="#skills" class="menu-items">Skills</a></li>
+                <li><a href="#works" class="menu-items">Works</a></li>
+                <li><a href="#contact" class="menu-items">Contact</a></li>
             </ul>
             <div class="menu-btn">
                 <span class="bar"></span>
@@ -44,7 +44,7 @@
             <div class="home-content">
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Michele Cozzola</div>
-                <div class="text-3">And I'm a <span>Front-End Developer</span></div>
+                <div class="text-3">And I'm a <span class="typing"></span></div>
                 <a href="#">Hire me!</a>
             </div>
         </div>
@@ -59,7 +59,7 @@
                     <img src="./Img/Michele_Cozzola_Foto_Profilo.jpg" alt="Foto Profilo">
                 </div>
                 <div class="column right">
-                    <div class="text">I'm Michele and I'm a <span>Developer</span></div>
+                    <div class="text">I'm Michele and I'm a <span class="typing2"></span></div>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus distinctio tenetur dolorem ratione id fuga mollitia tempore consequuntur cupiditate corrupti doloribus possimus recusandae quod, repellendus ullam odit, officiis, neque delectus. Suscipit temporibus cupiditate odio commodi quibusdam quod optio laborum pariatur dolores ad, ex praesentium enim culpa nostrum provident itaque fuga. Excepturi soluta error ducimus itaque vero corrupti rerum molestias quae?</p>
                     <a href="#" download="./img/Cv.pdf">Download CV</a>
                 </div>
@@ -156,7 +156,7 @@
     </section>
     <!-- SKILLS END -->
     <!-- WORKS END -->
-    <section class="teams" id="teams">
+    <section class="teams" id="works">
         <div class="carousel-container">
             <h2 class="title">My Works</h2>
             <div class="carousel main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
@@ -252,12 +252,20 @@
         </div>
     </section>
     <!-- CONTACTS END -->
+    <!-- FOOTER START -->
+    <footer>
+        <span>Created By <a href="#">Michele Cozzola</a> | <span class="far fa-copyright"><span id="year"></span> All rights reserved.</span></span>
+    </footer>
+    <!-- FOOTER END -->
     
     <!-- FONT AWESOME -->
     <script src="https://kit.fontawesome.com/4b900035da.js" crossorigin="anonymous"></script>    
 
     <!-- flickity -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <!-- typed -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 
     <!-- CUSTOM JS -->
     <script src="./script.js"></script>

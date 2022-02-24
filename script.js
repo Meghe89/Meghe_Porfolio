@@ -45,7 +45,7 @@ upBtn.addEventListener('click',()=>{
 
 /* typing animation */
  var typed = new Typed(".typing", {
-     strings: ["Front-End Developer", "Designer", "Freelancer"],
+     strings: ["Developer", "Designer", "Freelancer"],
      typeSpeed :100,
      backSpeed: 60,
      loop:true
